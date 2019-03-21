@@ -1,0 +1,3 @@
+node {
+Sh 'echo HelloWorld'
+}
