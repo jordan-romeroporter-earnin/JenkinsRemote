@@ -2,6 +2,6 @@ node {
 sh 'echo HelloWorld'
 
 stage('Clean') {
-       sh 'fastlane generate_ipa_develop'
+       sh 'fastlane custom_lane'
    }
 }
