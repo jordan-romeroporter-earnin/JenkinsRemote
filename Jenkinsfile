@@ -7,6 +7,6 @@ node {
         	    userRemoteConfigs: [[credentialsId:'/$githubToken' , url: 'https://github.com/jordan-romeroporter-earnin/JenkinsRemote.git']]])
 	    }
 	stage('MyCustom') {
-       		sh 'fastlane generate_ipa_develop'
+       		sh 'bundle exec fastlane generate_ipa_develop'
 	}
 }
