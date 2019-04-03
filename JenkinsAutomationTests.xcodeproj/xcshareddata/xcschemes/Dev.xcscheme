@@ -48,6 +48,16 @@
                ReferencedContainer = "container:JenkinsAutomationTests.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "FA9A16EC22556F9100709736"
+               BuildableName = "JenkinsAutomationTestsUITests2.xctest"
+               BlueprintName = "JenkinsAutomationTestsUITests2"
+               ReferencedContainer = "container:JenkinsAutomationTests.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

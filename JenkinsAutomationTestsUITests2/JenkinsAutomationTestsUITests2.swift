@@ -1,14 +1,14 @@
 //
-//  JenkinsAutomationTestsUITests.swift
-//  JenkinsAutomationTestsUITests
+//  JenkinsAutomationTestsUITests2.swift
+//  JenkinsAutomationTestsUITests2
 //
-//  Created by Jordan Romero Porter on 3/20/19.
+//  Created by Jordan Romero Porter on 4/3/19.
 //  Copyright © 2019 Earnin. All rights reserved.
 //
 
 import XCTest
 
-class JenkinsAutomationTestsUITests: XCTestCase {
+class JenkinsAutomationTestsUITests2: XCTestCase {
 
     var app:XCUIApplication!
     override func setUp() {
@@ -27,9 +27,9 @@ class JenkinsAutomationTestsUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
     
-    func testFail() {
+    func testSuccess() {
         app.launch()
-        XCTAssert(app.buttons["Button2"].exists)
+        XCTAssert(app.buttons["MainButton"].exists)
     }
 
     func testExample() {
