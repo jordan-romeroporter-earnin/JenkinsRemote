@@ -29,7 +29,7 @@ class JenkinsAutomationTestsUITests: XCTestCase {
     
     func testFail() {
         app.launch()
-        XCTAssert(app.buttons["Button2"].exists)
+        XCTAssert(app.buttons["MainButton"].exists)
     }
 
     func testExample() {
