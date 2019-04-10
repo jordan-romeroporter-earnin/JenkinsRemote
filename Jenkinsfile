@@ -1,12 +1,10 @@
 node {
-	sh 'echo HelloWorld'
-
 	stage('Checkout') {
-        	checkout([$class: 'GitSCM', branches: [[name: '*/$branch']], 
-	            doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], 
-        	    userRemoteConfigs: [[credentialsId:'/$githubToken' , url: 'https://github.com/jordan-romeroporter-earnin/JenkinsRemote.git']]])
+        	sh 'set -o pipefail && xcodebuild -project "JenkinsAutomationTests.xcodeproj" -scheme "Testing" -sdk "iphonesimulator12.2" -destination "platform=iOS Simulator,OS=latest,name=iPhone 7" test -only-testing:"JenkinsAutomationTestsUITests/JenkinsAutomationTestsUITests" -resultBundlePath TestResults | xcpretty'
 	    }
-	stage('MyCustom') {
-       		sh 'bundle exec fastlane generate_ipa_develop'
-	}
+        post {
+	    always{
+		xchtmlreport -r TestResults
+	    }
+        }
 }
